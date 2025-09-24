@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website | Quiz 1</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* This is the key to our JavaScript "routing" - it hides all sections by default */
+        .page-section {
+            display: none;
+        }
+
+        /* The section that is currently active will be shown */
+        .page-section.active {
+            display: block;
+        }
+        
+        /* Smooth scrolling for the nav links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-50 text-gray-800;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-900 mb-2 sm:mb-0">Antonius Andy Martono</a>
+            <div class="flex flex-wrap justify-center sm:justify-end space-x-4 text-sm font-medium">
+                <a href="#home" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Homepage</a>
+                <a href="#profile" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Profile</a>
+                <a href="#hometown" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Hometown</a>
+                <a href="#food" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Local Food</a>
+                <a href="#tourist" class="nav-link text-gray-600 hover:text-blue-600 transition duration-300">Tourist Places</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content area for all sections -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl">
+
+        <!-- Homepage Section -->
+        <section id="home" class="page-section active p-8 bg-white rounded-xl shadow-lg mb-8">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">Welcome to Andy's Personal Website</h1>
+                <p class="text-lg text-gray-600">This is the main landing page. Feel free to explore the different sections to learn more about me!</p>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="page-section p-8 bg-white rounded-xl shadow-lg mb-8">
+            <div class="text-center sm:text-left">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+                <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-8">
+                    <img src="https://i.imgur.com/rHqUPyP.jpeg" alt="A photo of you" class="rounded-full shadow-md w-32 h-32 object-cover">
+                    <div>
+                        <p class="text-gray-600 mb-2">
+                            Hello! My name is <strong class="text-gray-900">Antonius Andy Martono</strong>. As a student athlete, I've dedicated myself to the discipline and rigor of competitive swimming. Beyond the pool, my life is filled with the harmony of music; I find joy in playing various musical instruments. This combination of athletic commitment and artistic expression shapes my perspective, teaching me the importance of both physical endurance and creative harmony.
+                        </p>
+                        <p class="text-gray-600">
+                            I am passionate in playing piano and guitar, listening and playing the beautiful melodies and harmonies from those artistic instruments. Another thing that i like is hiking, I spent the weekends hiking with my family and enjoy the captivating wonder that nature provides.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hometown Section -->
+        <section id="hometown" class="page-section p-8 bg-white rounded-xl shadow-lg mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">My Hometown: Surabaya</h2>
+            <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-8">
+                <img src="https://i.imgur.com/T0uJqVt.png" alt="Placeholder image for your hometown" class="rounded-lg shadow-md w-full sm:w-1/2 object-cover">
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    Surabaya, the capital of East Java province, is the second-largest city in Indonesia and a major economic hub. Known as the "City of Heroes," Surabaya holds a significant place in Indonesia's history due to its role in the Battle of Surabaya during the Indonesian National Revolution.
+                    The city is a fascinating blend of historical architecture, modern skyscrapers, and vibrant culture. It offers a lively urban experience with bustling markets, beautiful parks, and a rich culinary scene. You can fill this section with more personal details about your experience living there.
+                </p>
+            </div>
+        </section>
+
+        <!-- Local Food Section -->
+        <section id="food" class="page-section p-8 bg-white rounded-xl shadow-lg mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Must-Try Local Food</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Food Item 1 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="https://i.imgur.com/Jz8iPL2.jpeg" alt="Sate Madura" class="rounded-lg w-full mb-4 h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Sate Madura</h3>
+                    <p class="text-gray-600 text-sm">Delicious grilled chicken or lamb skewers served with a savory peanut sauce. A true classic of Javanese cuisine.</p>
+                </div>
+                <!-- Food Item 2 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="https://i.imgur.com/xvNf7Op.png" alt="Rawon" class="rounded-lg w-full mb-4 h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Rawon</h3>
+                    <p class="text-gray-600 text-sm">A rich and flavorful beef stew, distinguished by its dark, almost black color from the use of 'keluak' nuts. It's often served with rice and sprouts.</p>
+                </div>
+                <!-- Food Item 3 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="https://i.imgur.com/VCrVfr2.png" alt="Tahu Campur" class="rounded-lg w-full mb-4 h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Tahu Campur</h3>
+                    <p class="text-gray-600 text-sm">A hearty mixed dish featuring fried tofu, meat, noodles, and a savory broth. It's a perfect blend of textures and flavors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tourist Places Section -->
+        <section id="tourist" class="page-section p-8 bg-white rounded-xl shadow-lg mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Top Tourist Places</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Place 1 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="https://i.imgur.com/vElsRO6.png" alt="Monkasel" class="rounded-lg w-full mb-4 h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Monkasel (Submarine Monument)</h3>
+                    <p class="text-gray-600 text-sm">An actual retired Russian submarine that has been converted into a museum. A great place to explore naval history.</p>
+                </div>
+                <!-- Place 2 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="https://i.imgur.com/afvrTTn.png" alt="Suramadu Bridge" class="rounded-lg w-full mb-4 h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Suramadu Bridge</h3>
+                    <p class="text-gray-600 text-sm">Connecting Surabaya with the island of Madura, this stunning bridge is an engineering marvel and offers a spectacular view at night.</p>
+                </div>
+                <!-- Place 3 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-md">
+                    <img src="https://i.imgur.com/IDMRhAO.png" alt="Tugu Pahlawan" class="rounded-lg w-full mb-4 h-48 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Tugu Pahlawan (Heroes Monument)</h3>
+                    <p class="text-gray-600 text-sm">A monument commemorating the heroes of the Battle of Surabaya. It's a must-visit for its historical significance and beautiful park.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+        <p>&copy; 2025 Antonius Andy Martono. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.page-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const showSection = (sectionId) => {
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            };
+
+            showSection('home');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const newSectionId = link.getAttribute('href').substring(1); // Remove the '#'
+                    showSection(newSectionId);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
